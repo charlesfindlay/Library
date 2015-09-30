@@ -23,9 +23,17 @@
                                     <segue destination="QNz-2A-Dtq" kind="modal" identifier="addBook" id="kE7-cp-sQd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pi-6v-IDI">
+                                <rect key="frame" x="104" y="415" width="113" height="30"/>
+                                <state key="normal" title="Print Book Titles"/>
+                                <connections>
+                                    <action selector="printBookTitles:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVw-QQ-mCP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5pi-6v-IDI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J5G-J3-Urm"/>
                             <constraint firstItem="906-I0-Qwf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UDa-Td-4O7"/>
                             <constraint firstItem="906-I0-Qwf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ufU-pJ-WeP"/>
                         </constraints>
@@ -47,11 +55,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AjJ-CQ-ARC">
-                                <rect key="frame" x="37" y="269" width="246" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AjJ-CQ-ARC">
+                                <rect key="frame" x="20" y="269" width="280" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.95939624481791241" blue="0.91552657958505179" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="HV5-ZN-rIL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVA-Wj-Rhu">
+                                <rect key="frame" x="131" y="458" width="58" height="30"/>
+                                <state key="normal" title="Finished"/>
+                                <connections>
+                                    <action selector="getNewBook:" destination="QNz-2A-Dtq" eventType="touchUpInside" id="Rgr-T6-vLM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a New Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAo-eO-b6w">
+                                <rect key="frame" x="97" y="97" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -59,6 +84,9 @@
                             <constraint firstItem="AjJ-CQ-ARC" firstAttribute="centerY" secondItem="D6C-dG-pEe" secondAttribute="centerY" id="WX9-Gt-tDf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="newTitle" destination="AjJ-CQ-ARC" id="9fY-8H-RKD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFc-vo-sBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
