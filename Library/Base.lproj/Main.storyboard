@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,12 +15,54 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="906-I0-Qwf">
+                                <rect key="frame" x="104" y="269" width="113" height="30"/>
+                                <state key="normal" title="Add a New Book"/>
+                                <connections>
+                                    <segue destination="QNz-2A-Dtq" kind="modal" identifier="addBook" id="kE7-cp-sQd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="906-I0-Qwf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UDa-Td-4O7"/>
+                            <constraint firstItem="906-I0-Qwf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ufU-pJ-WeP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="162.66666666666666" y="330.86000000000001"/>
+        </scene>
+        <!--Add Book View Controller-->
+        <scene sceneID="Ucv-UN-sAq">
+            <objects>
+                <viewController id="QNz-2A-Dtq" customClass="AddBookViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yVd-sh-VhY"/>
+                        <viewControllerLayoutGuide type="bottom" id="K8S-r3-L8g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D6C-dG-pEe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AjJ-CQ-ARC">
+                                <rect key="frame" x="37" y="269" width="246" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AjJ-CQ-ARC" firstAttribute="centerX" secondItem="D6C-dG-pEe" secondAttribute="centerX" id="RXD-Re-0gL"/>
+                            <constraint firstItem="AjJ-CQ-ARC" firstAttribute="centerY" secondItem="D6C-dG-pEe" secondAttribute="centerY" id="WX9-Gt-tDf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFc-vo-sBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="330"/>
         </scene>
     </scenes>
 </document>
