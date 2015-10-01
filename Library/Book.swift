@@ -9,13 +9,13 @@
 import Foundation
 
 enum genreList: String {
-    case Romance = "romance"
-    case YA = "ya"
-    case Mystery = "mystery"
-    case Suspense = "suspense"
-    case Horror = "horror"
-    case Biography = "biography"
-    case Western = "western"
+    case Romance = "Romance"
+    case YA = "YA"
+    case Mystery = "Mystery"
+    case Suspense = "Suspense"
+    case Horror = "Horror"
+    case Biography = "Biography"
+    case Western = "Western"
     
     static func getGenre(rawValue: String) -> genreList {
         return genreList(rawValue: rawValue)!

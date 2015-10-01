@@ -12,17 +12,19 @@ class AddBookViewController : UIViewController {
     
     
     @IBOutlet weak var newTitle: UITextField!
+    @IBOutlet weak var newAuthor: UITextField!
+    @IBOutlet weak var newLength: UITextField!
+    
+    
+    
     var workingLibrary = Library()
     
     
     @IBAction func getNewBook(sender: AnyObject) {
-        var newBook = Book()
-        newBook.title = newTitle.text
-        workingLibrary.books.append(newBook)
         
+        Library().addBook(workingLibrary, newTitle: newTitle.text!, newAuthor: newAuthor.text!, newLength: newLength.text!)
         //Dismiss modal view
         self.dismissViewControllerAnimated(true) {
-            
         }
     }
     
