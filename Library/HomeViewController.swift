@@ -11,11 +11,12 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var myLibrary = Library().seedLibrary()
+    @IBOutlet weak var libraryNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Debugging code
+        libraryNameLabel.text = myLibrary.name
         
     }
 
