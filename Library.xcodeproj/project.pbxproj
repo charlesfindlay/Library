@@ -15,6 +15,7 @@
 		3F91202D1BBC55640003AE41 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91202C1BBC55640003AE41 /* Book.swift */; settings = {ASSET_TAGS = (); }; };
 		3F91202F1BBC58AC0003AE41 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91202E1BBC58AC0003AE41 /* Library.swift */; settings = {ASSET_TAGS = (); }; };
 		3F9120311BBC5C2F0003AE41 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9120301BBC5C2F0003AE41 /* AddBookViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3F9120571BBF01830003AE41 /* FindBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9120561BBF01830003AE41 /* FindBookViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3F91202C1BBC55640003AE41 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		3F91202E1BBC58AC0003AE41 /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		3F9120301BBC5C2F0003AE41 /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
+		3F9120561BBF01830003AE41 /* FindBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				3F91201C1BBC54A90003AE41 /* HomeViewController.swift */,
 				3F9120301BBC5C2F0003AE41 /* AddBookViewController.swift */,
 				3F91201E1BBC54A90003AE41 /* Main.storyboard */,
+				3F9120561BBF01830003AE41 /* FindBookViewController.swift */,
 				3F91202C1BBC55640003AE41 /* Book.swift */,
 				3F91202E1BBC58AC0003AE41 /* Library.swift */,
 				3F9120211BBC54A90003AE41 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				3F9120311BBC5C2F0003AE41 /* AddBookViewController.swift in Sources */,
 				3F91202F1BBC58AC0003AE41 /* Library.swift in Sources */,
 				3F91201B1BBC54A90003AE41 /* AppDelegate.swift in Sources */,
+				3F9120571BBF01830003AE41 /* FindBookViewController.swift in Sources */,
 				3F91202D1BBC55640003AE41 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +299,7 @@
 				3F91202B1BBC54A90003AE41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
