@@ -29,6 +29,11 @@ class FindBookViewController : UIViewController {
     }
     
     
+    @IBAction func findTheBook(sender: AnyObject) {
+        var myBook: Book!
+        
+        myBook = Library().findBook(workingLibrary, editTitle: titleToFind.text!)
+    }
     
     
     

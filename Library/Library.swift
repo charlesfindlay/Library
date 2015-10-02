@@ -33,7 +33,16 @@ class Library {
     //TODO: List all books
     
     //TODO: Find a book - needed to implement both edit and delete functions
-    
+    func findBook(workingLibrary: Library, editTitle: String) -> Book {
+        var bookToEdit: Book?
+        let libraryBooks = workingLibrary.books
+        for item in libraryBooks {
+            if editTitle == item.title {
+                bookToEdit = item
+            }
+        }
+        return bookToEdit!
+    }
     
     
     
@@ -61,4 +70,3 @@ class Library {
         return newLibrary
     }// END seed function
 }
-
