@@ -12,6 +12,8 @@ class HomeViewController: UIViewController {
     
     var myLibrary = Library().seedLibrary()
     @IBOutlet weak var libraryNameLabel: UILabel!
+    var toEdit = false
+    var toDelete = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +28,23 @@ class HomeViewController: UIViewController {
     }
 
     
+    @IBAction func editABook(sender: UIButton) {
+        toEdit = true
+        toDelete = false
+        self.performSegueWithIdentifier("findBook", sender: sender)
+    }
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "addBook" {
             let vc = segue.destinationViewController as! AddBookViewController
             vc.workingLibrary = myLibrary
+        }
+        else if toEdit == true {
+            let vc = segue.destinationViewController as! FindBookViewController
+            vc.workingLibrary = myLibrary
+            vc.isEdit = toEdit
+            vc.isDelete = toDelete
         }
     }
     

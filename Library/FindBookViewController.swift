@@ -14,15 +14,22 @@ class FindBookViewController : UIViewController {
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var titleToFind: UITextField!
     
+    
+    var workingLibrary = Library()
     var isDelete = false
     var isEdit = true
     
     override func viewDidAppear(animated: Bool) {
         //Set code here to update label text to display either edit or delete.
+        if isEdit == true {
+            mainLabel.text = "Which book do you want to edit?"
+        } else {
+            mainLabel.text = "Which book do you want to delete?"
+        }
     }
-
-
-
-
-
+    
+    
+    
+    
+    
 }
