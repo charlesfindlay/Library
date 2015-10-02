@@ -17,11 +17,12 @@ enum genreList: String {
     case Biography = "Biography"
     case Western = "Western"
     
+    
     static func getGenre(rawValue: String) -> genreList {
         return genreList(rawValue: rawValue)!
     }
-    
 }
+
 
 
 struct Book {
@@ -30,5 +31,6 @@ struct Book {
     var genre: genreList?
     var length: Int?
     
-    
+    let genreArray = ["Romance","YA","Mystery","Suspense","Horror","Biography","Western"]
+
 }

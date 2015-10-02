@@ -14,11 +14,11 @@ class Library {
     
     
     
-    //TODO: Add book
-    func addBook(workingLibrary: Library, newTitle: String, newAuthor: String, newLength: String) {
+    func addBook(workingLibrary: Library, newTitle: String, newAuthor: String, newGenre: String, newLength: String) {
         var newBook = Book()
         newBook.title = newTitle
         newBook.author = newAuthor
+        newBook.genre = genreList.getGenre(newGenre)
         newBook.length = Int(newLength)
         workingLibrary.books.append(newBook)
         
@@ -43,7 +43,7 @@ class Library {
         let newLibrary = Library()
         let booksSeedArray = [
             ["The Shining", "Stephen King", "Horror", "688"],
-            ["The Last Apprentice: Revenge of the Witch", "Joseph Delaney", "YA", "384"]
+            ["The Last Apprentice 1", "Joseph Delaney", "YA", "384"]
         ] //END bookSeedArray
         
         for item in booksSeedArray {
