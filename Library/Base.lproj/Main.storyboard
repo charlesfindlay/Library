@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -65,8 +66,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVA-Wj-Rhu">
-                                <rect key="frame" x="131" y="458" width="58" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVA-Wj-Rhu">
+                                <rect key="frame" x="131" y="459" width="58" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="H87-dS-UWk"/>
+                                    <constraint firstAttribute="height" constant="30" id="KpZ-hU-R30"/>
+                                </constraints>
                                 <state key="normal" title="Finished"/>
                                 <connections>
                                     <action selector="getNewBook:" destination="QNz-2A-Dtq" eventType="touchUpInside" id="Rgr-T6-vLM"/>
@@ -96,23 +101,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pHx-D6-Bk7">
-                                <rect key="frame" x="73" y="256" width="0.0" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Genre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pHx-D6-Bk7">
+                                <rect key="frame" x="73" y="256" width="175" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.96078431372549022" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="vdo-uT-FS5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qww-MN-Ljm">
+                                <rect key="frame" x="137" y="503" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nUk-zO-QNU" firstAttribute="top" secondItem="pHx-D6-Bk7" secondAttribute="bottom" constant="17" id="5YE-pG-xJM"/>
+                            <constraint firstItem="K8S-r3-L8g" firstAttribute="top" secondItem="qww-MN-Ljm" secondAttribute="bottom" constant="35" id="5bp-YT-qcH"/>
                             <constraint firstItem="dIj-Bu-5KN" firstAttribute="top" secondItem="AjJ-CQ-ARC" secondAttribute="bottom" constant="13" id="6Bs-Ds-tn2"/>
                             <constraint firstItem="pHx-D6-Bk7" firstAttribute="top" secondItem="dIj-Bu-5KN" secondAttribute="bottom" constant="15" id="Ao6-MA-s6F"/>
                             <constraint firstItem="sAo-eO-b6w" firstAttribute="centerX" secondItem="D6C-dG-pEe" secondAttribute="centerX" id="CIp-0w-yxI"/>
                             <constraint firstItem="nUk-zO-QNU" firstAttribute="top" secondItem="dIj-Bu-5KN" secondAttribute="bottom" constant="62" id="IHm-rf-5eI"/>
+                            <constraint firstItem="qww-MN-Ljm" firstAttribute="leading" secondItem="D6C-dG-pEe" secondAttribute="leadingMargin" constant="117" id="Jv4-xO-18x"/>
+                            <constraint firstItem="GVA-Wj-Rhu" firstAttribute="centerX" secondItem="D6C-dG-pEe" secondAttribute="centerX" id="Srf-Oy-2LB"/>
                             <constraint firstItem="nUk-zO-QNU" firstAttribute="centerX" secondItem="D6C-dG-pEe" secondAttribute="centerX" constant="1" id="Ylm-9l-aAb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qww-MN-Ljm" secondAttribute="trailing" constant="115" id="bgN-Kh-EOA"/>
+                            <constraint firstItem="K8S-r3-L8g" firstAttribute="top" secondItem="GVA-Wj-Rhu" secondAttribute="bottom" constant="79" id="foP-5s-Zlb"/>
                             <constraint firstItem="pHx-D6-Bk7" firstAttribute="centerX" secondItem="D6C-dG-pEe" secondAttribute="centerX" id="ih9-j1-bH4"/>
                             <constraint firstItem="sAo-eO-b6w" firstAttribute="top" secondItem="yVd-sh-VhY" secondAttribute="bottom" constant="77" id="q1M-c6-vee"/>
                             <constraint firstItem="AjJ-CQ-ARC" firstAttribute="centerX" secondItem="D6C-dG-pEe" secondAttribute="centerX" id="r98-hB-KfU"/>

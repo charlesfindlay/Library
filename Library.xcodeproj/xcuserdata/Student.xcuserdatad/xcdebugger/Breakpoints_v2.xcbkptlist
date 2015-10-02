@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Library/Library.swift"
-            timestampString = "465500260.256201"
+            timestampString = "465500904.539831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "seedLibrary()"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Library/Library.swift"
-            timestampString = "465500260.256201"
+            timestampString = "465500904.539831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "seedLibrary()"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,13 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Library/AddBookViewController.swift"
-            timestampString = "465499807.250429"
+            timestampString = "465501073.463369"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "AddBookViewController"
-            landmarkType = "3">
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "cancelAddBook(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

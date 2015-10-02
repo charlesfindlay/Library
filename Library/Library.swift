@@ -32,6 +32,9 @@ class Library {
     
     //TODO: List all books
     
+    //TODO: Find a book - needed to implement both edit and delete functions
+    
+    
     
     
     

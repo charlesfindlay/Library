@@ -30,6 +30,10 @@ class AddBookViewController : UIViewController, UIPickerViewDataSource, UIPicker
     }
     
     
+    @IBAction func cancelAddBook(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true) {
+        }
+    }
     
     @IBAction func getNewBook(sender: AnyObject) {
         
