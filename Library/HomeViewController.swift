@@ -58,6 +58,10 @@ class HomeViewController: UIViewController {
             vc.isEdit = toEdit
             vc.isDelete = toDelete
         }
+        else if segue.identifier == "listBooks" {
+            let vc = segue.destinationViewController as! ListBooksViewController
+            vc.workingLibrary = myLibrary
+        }
     }
     
     
@@ -66,6 +70,7 @@ class HomeViewController: UIViewController {
         for item in myLibrary.books {
             print("\(item.title!) - \(item.author!) - \(item.genre!) - \(item.length!)")
         }
+        self.performSegueWithIdentifier("listBooks", sender: sender)
     }
     
 

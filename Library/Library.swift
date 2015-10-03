@@ -8,10 +8,11 @@
 
 import Foundation
 
+
+
 class Library {
     var name: String?
     var books: Array<Book> = []
-    
     
     
     func addBook(workingLibrary: Library, newTitle: String, newAuthor: String, newGenre: String, newLength: String) {
@@ -29,6 +30,16 @@ class Library {
     
     
     //TODO: Delete book
+    func deleteABookFromLibrary(workingLibrary: Library, bookToDelete: Book) {
+        let titleToDelete = bookToDelete.title
+        if let i = workingLibrary.books.indexOf({$0.title == titleToDelete}) {
+            workingLibrary.books.removeAtIndex(i)
+        }
+    }
+    
+    
+    
+    
     
     //TODO: List all books
     
@@ -70,3 +81,12 @@ class Library {
         return newLibrary
     }// END seed function
 }
+
+
+//extension RangeReplaceableCollectionType where Generator.Element : Equatable {
+//    mutating func removeObject(object: Generator.Element) {
+//        if let index = self.indexOf(object) {
+//            self.removeAtIndex(index)
+//        }
+//    }
+//}

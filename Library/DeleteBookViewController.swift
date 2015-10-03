@@ -25,6 +25,11 @@ class DeleteBookViewController: UIViewController {
     
     
     @IBAction func deleteConfirmed(sender: AnyObject) {
+        
+        Library().deleteABookFromLibrary(workingLibrary, bookToDelete: bookToDelete)
+        self.dismissViewControllerAnimated(true) {
+        }
+        
     }
     
     

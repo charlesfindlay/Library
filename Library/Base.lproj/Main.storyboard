@@ -92,6 +92,7 @@
                     <connections>
                         <outlet property="libraryNameLabel" destination="LoC-91-O06" id="OJd-j1-7gy"/>
                         <segue destination="25q-Gn-wdw" kind="push" identifier="findBook" id="qgf-XL-L1H"/>
+                        <segue destination="Bj9-gj-T1q" kind="push" identifier="listBooks" id="t1u-xg-z35"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -208,6 +209,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5T-pP-9Fy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1627" y="997"/>
+        </scene>
+        <!--List Books View Controller-->
+        <scene sceneID="972-yL-n7X">
+            <objects>
+                <viewController id="Bj9-gj-T1q" customClass="ListBooksViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c4P-Wm-D2r"/>
+                        <viewControllerLayoutGuide type="bottom" id="s3M-0Q-8oc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CBB-51-0Bm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HiU-UY-DSw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qwQ-xk-mm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1139" y="-37"/>
         </scene>
         <!--Add Book View Controller-->
         <scene sceneID="Ucv-UN-sAq">
