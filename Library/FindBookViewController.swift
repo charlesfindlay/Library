@@ -42,7 +42,9 @@ class FindBookViewController : UIViewController {
         if titleToFind.text == myBook.title {
             if isEdit == true {
                 self.performSegueWithIdentifier("editBook", sender: sender)
-            } //Add delete segue here
+            } else {
+                self.performSegueWithIdentifier("deleteBook", sender: sender)
+            }
         }
     }
     
@@ -57,6 +59,14 @@ class FindBookViewController : UIViewController {
             vc.newGenre.placeholder = String(myBook.genre)
             vc.newLength.placeholder = String(myBook.length)
             vc.isEdit = true
+        } else {
+            let vc = segue.destinationViewController as! DeleteBookViewController
+            vc.workingLibrary = workingLibrary
+            vc.bookToDelete = myBook
+            //This code threw nil while unwrapping optional errors
+//            vc.deleteTitle.text = myBook.title!
+//            vc.deleteAuthor.text = myBook.author!
+            
         }
     }
     
