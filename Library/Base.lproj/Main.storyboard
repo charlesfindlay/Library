@@ -29,8 +29,8 @@
                                     <segue destination="QNz-2A-Dtq" kind="modal" identifier="addBook" id="kE7-cp-sQd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pi-6v-IDI">
-                                <rect key="frame" x="85" y="343" width="150" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pi-6v-IDI">
+                                <rect key="frame" x="85" y="346" width="150" height="60"/>
                                 <color key="backgroundColor" red="0.17426506829999999" green="1" blue="0.049859686450000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="8Jh-DL-w1I"/>
@@ -63,6 +63,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Delete a Book"/>
+                                <connections>
+                                    <action selector="deleteABook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1BE-CP-fXG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Library Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LoC-91-O06">
                                 <rect key="frame" x="109" y="273" width="103" height="21"/>
@@ -151,11 +154,31 @@
                     <connections>
                         <outlet property="mainLabel" destination="CDg-o5-QzO" id="vNI-JU-dKq"/>
                         <outlet property="titleToFind" destination="JjR-Bo-lM7" id="4hH-AQ-2Al"/>
+                        <segue destination="QNz-2A-Dtq" kind="modal" identifier="editBook" id="clb-Qf-L41"/>
+                        <segue destination="noB-AG-Ji8" kind="modal" id="qKD-jI-efj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyX-6m-xLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1159" y="577"/>
+            <point key="canvasLocation" x="1139" y="707"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2Ju-H4-VAa">
+            <objects>
+                <viewController id="noB-AG-Ji8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FiP-sh-Tc5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ymg-bS-hNh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T58-Br-hHj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5T-pP-9Fy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1627" y="997"/>
         </scene>
         <!--Add Book View Controller-->
         <scene sceneID="Ucv-UN-sAq">
@@ -255,11 +278,12 @@
                         <outlet property="newGenre" destination="pHx-D6-Bk7" id="riE-a1-aUy"/>
                         <outlet property="newLength" destination="nUk-zO-QNU" id="JGH-ea-XSK"/>
                         <outlet property="newTitle" destination="AjJ-CQ-ARC" id="9fY-8H-RKD"/>
+                        <outlet property="viewDescriptionLabel" destination="sAo-eO-b6w" id="EYs-GZ-04F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFc-vo-sBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1159" y="-137"/>
+            <point key="canvasLocation" x="1627" y="330"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xJM-db-yVm">
@@ -280,4 +304,7 @@
             <point key="canvasLocation" x="162" y="330"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kE7-cp-sQd"/>
+    </inferredMetricsTieBreakers>
 </document>

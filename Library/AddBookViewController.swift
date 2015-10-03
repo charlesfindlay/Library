@@ -11,13 +11,15 @@ import UIKit
 class AddBookViewController : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     
-    @IBOutlet weak var newTitle: UITextField!
+    @IBOutlet weak var viewDescriptionLabel: UILabel?
+    @IBOutlet weak var newTitle: UITextField?
     @IBOutlet weak var newAuthor: UITextField!
     @IBOutlet weak var newLength: UITextField!    
     @IBOutlet weak var newGenre: UITextField!
     
     var workingLibrary = Library()
     var genrePicker = Book().genreArray
+    var isEdit = false
     
     
     override func viewDidLoad() {
@@ -37,7 +39,7 @@ class AddBookViewController : UIViewController, UIPickerViewDataSource, UIPicker
     
     @IBAction func getNewBook(sender: AnyObject) {
         
-        Library().addBook(workingLibrary, newTitle: newTitle.text!, newAuthor: newAuthor.text!, newGenre: newGenre.text!, newLength: newLength.text!)
+        Library().addBook(workingLibrary, newTitle: newTitle!.text!, newAuthor: newAuthor.text!, newGenre: newGenre.text!, newLength: newLength.text!)
         //Dismiss modal view
         self.dismissViewControllerAnimated(true) {
         }

@@ -34,13 +34,25 @@ class HomeViewController: UIViewController {
         self.performSegueWithIdentifier("findBook", sender: sender)
     }
     
+    @IBAction func deleteABook(sender: UIButton) {
+        toEdit = false
+        toDelete = true
+        self.performSegueWithIdentifier("findBook", sender: sender)
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "addBook" {
             let vc = segue.destinationViewController as! AddBookViewController
             vc.workingLibrary = myLibrary
+            //vc.viewDescriptionLabel!.text = "Add a New Book"
+            vc.isEdit = false
         }
         else if toEdit == true {
+            let vc = segue.destinationViewController as! FindBookViewController
+            vc.workingLibrary = myLibrary
+            vc.isEdit = toEdit
+            vc.isDelete = toDelete
+        } else if toDelete == true {
             let vc = segue.destinationViewController as! FindBookViewController
             vc.workingLibrary = myLibrary
             vc.isEdit = toEdit
