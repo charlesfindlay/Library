@@ -66,6 +66,8 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func printBookTitles(sender: UIButton) {
+        toDelete = false
+        toEdit = false
         print(myLibrary.name!)
         for item in myLibrary.books {
             print("\(item.title!) - \(item.author!) - \(item.genre!) - \(item.length!)")

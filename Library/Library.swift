@@ -27,6 +27,15 @@ class Library {
     
     
     //TODO: Edit book
+    func updateBook(workingLibrary: Library, bookToEdit: Book, newTitle: String, newAuthor: String, newGenre: String, newLength: String) {
+        
+        if let i = workingLibrary.books.indexOf({$0.title == bookToEdit.title}) {
+            workingLibrary.books[i].title = newTitle
+            workingLibrary.books[i].author = newAuthor
+            workingLibrary.books[i].genre = genreList.getGenre(newGenre)
+            workingLibrary.books[i].length = Int(newLength)
+        }
+    }
     
     
     //TODO: Delete book

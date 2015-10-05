@@ -20,7 +20,21 @@ class AddBookViewController : UIViewController, UIPickerViewDataSource, UIPicker
     var workingLibrary = Library()
     var genrePicker = Book().genreArray
     var isEdit = false
+    var bookToEdit: Book!
     
+    
+    override func viewWillAppear(animated: Bool) {
+        if isEdit == true {
+            viewDescriptionLabel!.text = "Edit this book"
+            newTitle?.text = bookToEdit.title
+            newAuthor?.text = bookToEdit.author
+            newGenre?.text = String(bookToEdit.genre!)
+            newLength?.text = String(bookToEdit.length!)
+            
+        } else {
+            viewDescriptionLabel!.text = "Add a book"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +53,12 @@ class AddBookViewController : UIViewController, UIPickerViewDataSource, UIPicker
     
     @IBAction func getNewBook(sender: AnyObject) {
         
-        Library().addBook(workingLibrary, newTitle: newTitle!.text!, newAuthor: newAuthor.text!, newGenre: newGenre.text!, newLength: newLength.text!)
+        if isEdit == false {
+            
+            Library().addBook(workingLibrary, newTitle: newTitle!.text!, newAuthor: newAuthor.text!, newGenre: newGenre.text!, newLength: newLength.text!)
+        } else if isEdit == true {
+            Library().updateBook(workingLibrary, bookToEdit: bookToEdit, newTitle: newTitle!.text!, newAuthor: newAuthor.text!, newGenre: newGenre.text!, newLength: newLength.text!)
+        }
         //Dismiss modal view
         self.dismissViewControllerAnimated(true) {
         }

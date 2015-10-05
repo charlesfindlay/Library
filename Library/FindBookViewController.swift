@@ -53,11 +53,7 @@ class FindBookViewController : UIViewController {
         if segue.identifier == "editBook" {
             let vc = segue.destinationViewController as! AddBookViewController
             vc.workingLibrary = workingLibrary
-            //vc.viewDescriptionLabel.text = "Make your Edits"
-            vc.newTitle!.placeholder = myBook.title!
-            vc.newAuthor.placeholder = myBook.author!
-            vc.newGenre.placeholder = String(myBook.genre)
-            vc.newLength.placeholder = String(myBook.length)
+            vc.bookToEdit = myBook
             vc.isEdit = true
         } else {
             let vc = segue.destinationViewController as! DeleteBookViewController
