@@ -8,9 +8,28 @@
 
 import UIKit
 
-class ListBooksViewController : UIViewController {
+class ListBooksViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    //model
     var workingLibrary: Library?
+    var bookList: Array<Book>!
+    
+    
+    //number of rows
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (self.bookList.count)
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("BookTitleCell")
+        let titleForRow = self.bookList[indexPath.row].title
+        cell!.textLabel?.text = titleForRow
+        
+        return cell!
+    }
+    
     
 }
