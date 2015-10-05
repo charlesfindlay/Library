@@ -61,6 +61,7 @@ class HomeViewController: UIViewController {
         else if segue.identifier == "listBooks" {
             let vc = segue.destinationViewController as! ListBooksViewController
             vc.workingLibrary = myLibrary
+            vc.bookList = myLibrary.books
         }
     }
     
